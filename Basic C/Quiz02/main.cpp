@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main(){
+            printf("****SHOPPING **** \n");
+    //input 
+    int pro_Amount = 0 ,pro_Price = 10;
+    printf("Input product amount :  ");
+    scanf("%d",&pro_Amount);
+    float final_Price,discount = 5.00; //Set Discount 
+    if(pro_Amount <= 0){
+        printf("Amout Price Not Zero \n");
+    }else{
+        /* 
+       if(pro_Amount >= 5){
+            int pro_LastPrice = pro_Amount * pro_Price ; // จะได้ราคาสินค้า * กับจำนวณที่ซ์ื้อ
+            float discount_Price = (pro_LastPrice * discount) / 100  ;// จะได้ส่วนลดของราคาสินค้า
+            float final_Price = pro_LastPrice - discount_Price ;
+            printf("you can buy product Amount is %d %s",pro_Amount,"Amount \n");
+            printf("you can buy product is :%d %s",pro_LastPrice,"Baht \n");
+            printf("you Get discount 5 pecent is %0.2f %s",discount_Price,"Baht \n");
+            printf("Total product price is : %0.2f %s",final_Price ,"Baht \n");
+       }else{ 
+            printf("Total product price is : %0.2f %s",final_Price=pro_Price*pro_Amount,"Baht \n");
+       }
+       */
+        int pro_LastPrice = pro_Amount * pro_Price ; // จะได้ราคาสินค้า * กับจำนวณที่ซ์ื้อ
+        float discount_Price = (pro_Amount >= 5) ? (pro_LastPrice * discount) / 100 :0;
+        float final_Price = pro_LastPrice - discount_Price;
+
+            printf("you can buy product Amount is %d %s",pro_Amount,"Amount \n");
+            printf("you can buy product is :%d %s",pro_LastPrice,"Baht \n");
+            printf("you Get discount 5 pecent is %0.2f %s",discount_Price,"Baht \n");  //เมื่อไม่ได้ส่วนลด Discount_Price จะเท่ากับ 0
+            printf("Total product price is : %0.2f %s",final_Price ,"Baht \n");
+    }
+
+
+
+return 0 ;
+}
